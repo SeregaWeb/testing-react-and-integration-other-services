@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import './App.css';
+import './style/screen.scss';
 import FirstComponent from './components/ComponentFirst/ComponentFirst';
 import Table from './components/Table/Table';
 import Form from './components/Table/Form';
 import Wikipedia from './components/Api/Wikipedia';
+import Router from './router/Router';
 
 class App extends Component {
   state = {
@@ -44,6 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <Router/>
         <FirstComponent/>
         <div className="row">
         <Table characterData={this.state.characters} removeCharacter={this.removeCharacter}/>
